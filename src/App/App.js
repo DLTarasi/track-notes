@@ -6,6 +6,7 @@ import React from 'react';
 function App() {
   const [showNote, setshowNote] = React.useState(false)
   const onClick = () => setshowNote(!showNote)
+  
   return (
     <div style={{  
       backgroundImage: "url(" + hpr + ")",
@@ -16,7 +17,7 @@ function App() {
       height: '100vh',
     }}>
     <button style={{position: 'fixed', top: '72%', right: '19%',}} onClick={onClick}>1</button>
-    { showNote ? < Note /> : null}
+    { showNote ? < Note number = '1' /> : null}
     </div>
   );
 }
