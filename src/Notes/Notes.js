@@ -13,6 +13,7 @@ class Note extends React.Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
+    /// handle save of data here
   }
 
   handleSubmit(event) {
@@ -23,14 +24,14 @@ class Note extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label style={{position: 'fixed', top: '0%', left: '70%',}}>
+        <label style={{position: 'fixed', top: '2%', left: '70%',}}>
           Turn {this.props.number} Notes:
           </label>
-          <textarea style={{position: 'fixed', top: '3%', left: '50%', resize: 'none', height: '380px', width: '620px', backgroundColor: '#f8f8f8',   
+          <textarea style={{position: 'fixed', top: '5%', left: '50%', resize: 'none', height: '47vh', width: '47vw', backgroundColor: '#f8f8f8',   
           border: '2px solid #ccc',
           borderRadius: '4px',
           outline: 'none'}} 
-          value={this.state.value} onChange={this.handleChange} />
+          value={this.state.value} onChange={this.handleChange} /> 
       </form>
     );
   }
