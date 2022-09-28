@@ -23,11 +23,14 @@ class Note extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <label style={{position: 'fixed', top: '0%', left: '70%',}}>
           Turn {this.props.number} Notes:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+          </label>
+          <textarea style={{position: 'fixed', top: '3%', left: '50%', resize: 'none', height: '380px', width: '620px', backgroundColor: '#f8f8f8',   
+          border: '2px solid #ccc',
+          borderRadius: '4px',
+          outline: 'none'}} 
+          value={this.state.value} onChange={this.handleChange} />
       </form>
     );
   }
