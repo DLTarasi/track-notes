@@ -1,7 +1,8 @@
 import hpr from '../hpr_map.webp';
 import './App.css';
-import Note from '../Notes/Notes';
+import Note from '../Notes/Notes.js';
 import React from 'react';
+import CornerButton from '../CornerButton/CornerButton.js'
 
 function App() {
   const [showNote1, setshowNote1] = React.useState(false)
@@ -17,10 +18,11 @@ function App() {
       backgroundRepeat: 'no-repeat',
       width: '100vw',
       height: '100vh',
+      backgroundAttachment: 'fixed',
     }}>
     <header>High Plains Raceway</header>
-    <button style={{position: 'fixed', top: '72%', right: '19%',}} onClick={onClick1}>1</button>
-    <button style={{position: 'fixed', top: '56%', right: '7%',}} onClick={onClick2}>2</button>
+    {< CornerButton top={'72%'} right={'19%'} cornerNumber={'1'} onClick={onClick1} />}
+    {< CornerButton top={'56%'} right={'7%'} cornerNumber={'2'} onClick={onClick2} />}
     { showNote1 ? < Note number = '1' /> : null}
     { showNote2 ? < Note number = '2' /> : null}
       </div>
