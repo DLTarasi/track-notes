@@ -18,7 +18,6 @@ function Map(track) {
         }
 
     useEffect(() => {
-        console.log(track.track)
         if (track.track === 'hpr') {
             setActiveTrack(hpr)
         }
@@ -44,9 +43,9 @@ function Map(track) {
       position: 'relative',
     }}>
     </div>
-    {< CornerButton top={'66%'} right={'19%'} cornerNumber={'1'} onClick={() => onClick('1')} />}
-    {< CornerButton top={'53%'} right={'7%'} cornerNumber={'2'} onClick={() => onClick('2')} />}
-    {< CornerButton top={'78%'} right={'5%'} cornerNumber={'3'} onClick={() => onClick('3')} />}
+    {(activeTrack != noMap) && < CornerButton top={'66%'} right={'19%'} cornerNumber={'1'} onClick={() => onClick('1')} />}
+    {(activeTrack != noMap) && < CornerButton top={'53%'} right={'7%'} cornerNumber={'2'} onClick={() => onClick('2')} />}
+    {(activeTrack != noMap) && < CornerButton top={'78%'} right={'5%'} cornerNumber={'3'} onClick={() => onClick('3')} />}
     </div>
     { activeNote && < Note number = {activeNote} /> }
   </div>
