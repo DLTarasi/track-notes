@@ -11,21 +11,29 @@ function App() {
   const onClick2 = () => setshowNote2(!showNote2) 
 
   return (
+    <div>
+      <header style={{textAlign: 'center'}}>High Plains Raceway</header>
+      <div style={{
+        height: '600px',
+        width: '800px',
+        position: 'relative'
+      }}>
       <div style={{  
       backgroundImage: "url(" + hpr + ")",
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      width: '100vw',
-      height: '100vh',
-      backgroundAttachment: 'fixed',
+      width: '100%',
+      height: '100%',
+      position: 'relative'
     }}>
-    <header>High Plains Raceway</header>
-    {< CornerButton top={'72%'} right={'19%'} cornerNumber={'1'} onClick={onClick1} />}
-    {< CornerButton top={'56%'} right={'7%'} cornerNumber={'2'} onClick={onClick2} />}
+    </div>
+    {< CornerButton top={'65%'} right={'19%'} cornerNumber={'1'} onClick={onClick1} />}
+    {< CornerButton top={'52%'} right={'7%'} cornerNumber={'2'} onClick={onClick2} />}
+    </div>
     { showNote1 ? < Note number = '1' /> : null}
     { showNote2 ? < Note number = '2' /> : null}
-      </div>
+  </div>
   );
 }
 
