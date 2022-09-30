@@ -4,7 +4,7 @@ class Note extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Enter notes for turn ' + this.props.number
+      value: 'Enter notes'
     };
 
     this.handleChange = this.handleChange.bind(this);
