@@ -5,10 +5,15 @@ import React from 'react';
 import CornerButton from '../CornerButton/CornerButton.js'
 
 function App() {
-  const [showNote1, setshowNote1] = React.useState(false)
-  const onClick1 = () => setshowNote1(!showNote1) /// need to set all other notes to false for each of these
-  const [showNote2, setshowNote2] = React.useState(false)
-  const onClick2 = () => setshowNote2(!showNote2) 
+  const [activeNote, setActiveNote] = React.useState(null)
+  const onClick = (cornerNumber) => {
+      if (cornerNumber === activeNote) {
+        setActiveNote(null)
+      }
+      else {
+        setActiveNote(cornerNumber)
+      }
+    }
 
   return (
     <div>
@@ -28,11 +33,10 @@ function App() {
       position: 'relative'
     }}>
     </div>
-    {< CornerButton top={'65%'} right={'19%'} cornerNumber={'1'} onClick={onClick1} />}
-    {< CornerButton top={'52%'} right={'7%'} cornerNumber={'2'} onClick={onClick2} />}
+    {< CornerButton top={'65%'} right={'19%'} cornerNumber={'1'} onClick={() => onClick('1')} />}
+    {< CornerButton top={'52%'} right={'7%'} cornerNumber={'2'} onClick={() => onClick('2')} />}
     </div>
-    { showNote1 ? < Note number = '1' /> : null}
-    { showNote2 ? < Note number = '2' /> : null}
+    { activeNote && < Note number = {activeNote} /> }
   </div>
   );
 }
