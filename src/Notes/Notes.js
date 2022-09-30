@@ -24,10 +24,10 @@ class Note extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label style={{position: 'fixed', top: '2%', left: '70%',}}>
+        <label style={{position: 'fixed', top: '14px', left: '730px',}}>
           Turn {this.props.number} Notes:
           </label>
-          <textarea style={{position: 'fixed', top: '5%', left: '50%', resize: 'none', height: '47vh', width: '47vw', backgroundColor: '#f8f8f8',   
+          <textarea style={{position: 'fixed', top: '35px', left: '500px', resize: 'none', height: '310px', width: '49vw', backgroundColor: '#f8f8f8',   
           border: '2px solid #ccc',
           borderRadius: '4px',
           outline: 'none'}} 

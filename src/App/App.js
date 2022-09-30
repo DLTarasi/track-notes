@@ -19,8 +19,8 @@ function App() {
     <div>
       <header style={{textAlign: 'center'}}>High Plains Raceway</header>
       <div style={{
-        height: '600px',
-        width: '800px',
+        height: '700px',
+        width: '1000px',
         position: 'relative'
       }}>
       <div style={{  
@@ -30,11 +30,12 @@ function App() {
       backgroundRepeat: 'no-repeat',
       width: '100%',
       height: '100%',
-      position: 'relative'
+      position: 'relative',
     }}>
     </div>
-    {< CornerButton top={'65%'} right={'19%'} cornerNumber={'1'} onClick={() => onClick('1')} />}
-    {< CornerButton top={'52%'} right={'7%'} cornerNumber={'2'} onClick={() => onClick('2')} />}
+    {< CornerButton top={'66%'} right={'19%'} cornerNumber={'1'} onClick={() => onClick('1')} />}
+    {< CornerButton top={'53%'} right={'7%'} cornerNumber={'2'} onClick={() => onClick('2')} />}
+    {< CornerButton top={'78%'} right={'5%'} cornerNumber={'3'} onClick={() => onClick('3')} />}
     </div>
     { activeNote && < Note number = {activeNote} /> }
   </div>
